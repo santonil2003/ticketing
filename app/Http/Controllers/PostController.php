@@ -47,7 +47,7 @@ class PostController extends Controller
     public function show($id)
     {
         //
-        return "Show Post :$id";
+        return "Show Post ::$id";
     }
 
     /**
@@ -82,5 +82,19 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function contact()
+    {
+        $data = array(1, 2, 3);
+        $name = "sanil";
+
+        // way 1
+        /*
+        return view('contact')->with('data',$data);
+         */
+
+        // way 2
+        return view('contact', compact('data','name'));
     }
 }

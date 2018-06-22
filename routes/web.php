@@ -63,5 +63,9 @@ Route::get('/test/{id}', 'TestController@show');
 /**
 * Route to controller resource...
 */
+
+Route::get('post/contact/', 'PostController@contact');
 Route::resource('post', 'PostController');
+
+
 
